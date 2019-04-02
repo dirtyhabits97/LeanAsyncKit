@@ -6,7 +6,7 @@
 //  Copyright © 2019 Gonzalo Reyes Huertas. All rights reserved.
 //
 
-public struct Promise<Value> {
+public struct Promise<Value, Error: Swift.Error> {
     
     private var onHold: Result<Value, Error>?
     private var onFullfilled: ((Value) -> Void)?
